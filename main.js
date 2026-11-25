@@ -8,7 +8,7 @@
   // Mouse spotlight + custom cursor
   var spot = $('spot'), cur = $('cur');
   document.addEventListener('mousemove', function (e) {
-    spot.style.background = 'radial-gradient(420px circle at ' + e.clientX + 'px ' + e.clientY + 'px, rgba(79,70,229,0.07), transparent 70%)';
+    spot.style.background = 'radial-gradient(420px circle at ' + e.clientX + 'px ' + e.clientY + 'px, rgba(0,0,0,0.045), transparent 70%)';
     cur.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)';
   });
 
@@ -118,9 +118,9 @@
   function run(input) {
     var raw = input.trim(); if (!raw) return;
     if (/^(clear|cls)$/i.test(raw)) { lines.innerHTML = ''; return; }
-    addLine('$ ' + raw, '#34D399');
+    addLine('$ ' + raw, '#FFFFFF');
     var it = intent(raw);
-    addLine(it ? A[it] : 'Hmm, I didn\'t catch that. Try asking about his experience, education, projects or how to contact him — or tap a button below.', it ? '#E5E5E5' : '#FBBF24');
+    addLine(it ? A[it] : 'Hmm, I didn\'t catch that. Try asking about his experience, education, projects or how to contact him — or tap a button below.', it ? '#E5E5E5' : '#BDBDBD');
     if (it === 'hire') openForm();
     if (it === 'party') boom();
   }
@@ -130,7 +130,7 @@
   ['about', 'experience', 'education', 'projects', 'research', 'skills', 'hobbies', 'contact', 'hire'].forEach(function (c) {
     var b = document.createElement('button'); b.type = 'button'; b.textContent = c;
     b.style.cssText = 'background:#1F1F1F;color:#E5E5E5;border:1px solid #3A3A3A;border-radius:999px;padding:6px 12px;font:inherit;font-size:12px;cursor:pointer';
-    b.addEventListener('mouseenter', function () { b.style.background = '#34D399'; b.style.color = '#111111'; });
+    b.addEventListener('mouseenter', function () { b.style.background = '#FFFFFF'; b.style.color = '#111111'; });
     b.addEventListener('mouseleave', function () { b.style.background = '#1F1F1F'; b.style.color = '#E5E5E5'; });
     b.addEventListener('click', function () { run(c); });
     chips.appendChild(b);
