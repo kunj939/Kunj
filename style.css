@@ -1,0 +1,40 @@
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF}
+h1,h2,h3,.big{font-family:'Bricolage Grotesque','DM Sans',sans-serif}h1{font-weight:800!important;letter-spacing:-.045em!important}h3{letter-spacing:-.01em}
+[style*="text-transform:uppercase"]{font-family:'JetBrains Mono',ui-monospace,monospace!important;letter-spacing:.04em!important}
+a{color:#111111;text-decoration:none}
+@media (min-width:1024px){.sb{position:sticky;top:0;height:100vh;box-sizing:border-box}}
+.nv .bar{display:inline-block;width:32px;height:1px;background:#8A8A8A;transition:width .3s,background .3s}.nv:hover .bar{width:64px;background:#111111}.nv:hover{color:#111111!important}
+.lst:hover .it{opacity:.45}.lst .it{transition:opacity .3s,background .3s}.lst .it:hover{opacity:1;background:#F6F6F6}
+.it:hover .tt{text-decoration:underline;text-underline-offset:4px}.it .ar{display:inline-block;transition:transform .3s}.it:hover .ar{transform:translate(3px,-3px)}
+.btn{transition:transform .25s,background .25s}.btn:hover{transform:translateY(-2px);background:#333333!important}
+.ul:hover{text-decoration:underline;text-underline-offset:4px}
+input:focus,textarea:focus{outline:2px solid #111111;outline-offset:1px}
+.lt{display:inline-block;transition:transform .25s cubic-bezier(.3,1.6,.5,1),color .25s}.lt:hover{transform:translateY(-10px) rotate(-6deg);color:#4F46E5}
+@keyframes tick{0%,20%{transform:translateY(0)}25%,45%{transform:translateY(-20%)}50%,70%{transform:translateY(-40%)}75%,95%{transform:translateY(-60%)}100%{transform:translateY(-80%)}}.tk{animation:tick 10s cubic-bezier(.7,0,.2,1) infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(16,185,129,.5)}100%{box-shadow:0 0 0 8px rgba(16,185,129,0)}}.dot{animation:pulse 1.6s ease-out infinite}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}@supports (animation-timeline:scroll()){.pg{animation:grow linear both;animation-timeline:scroll(root)}}
+.it svg{transition:transform .4s cubic-bezier(.2,.8,.2,1)}.it:hover svg{transform:rotate(-2.5deg) scale(1.06)}
+.it svg *{transform-box:fill-box;transform-origin:center}.play{transition:opacity .3s}.it:hover .play{opacity:0}
+@keyframes cel{50%{fill:#312E81}}@keyframes pk{to{transform:translateX(16px)}}@keyframes core{to{fill:#C7D2FE;transform:scale(.8)}}@keyframes led{50%{opacity:.2}}
+@keyframes rt{to{stroke-dashoffset:-14}}@keyframes trav{from{offset-distance:0%}to{offset-distance:100%}}@keyframes drop{0%{transform:translateY(-14px);opacity:0}100%{transform:none;opacity:1}}@keyframes din{from{transform:translateX(14px);opacity:0}}
+@keyframes occ{50%{fill:#FDE68A}}@keyframes occ2{50%{fill:#F43F5E}}@keyframes bar{from{transform:scaleY(.35)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes jit{to{transform:translate(1.5px,-2px)}}@keyframes pop{0%{transform:scale(0)}100%{transform:scale(1)}}
+.it:hover .cel{animation:cel 1.5s ease-in-out infinite}.it:hover .pk{animation:pk .7s linear infinite}.it:hover .core{animation:core .6s ease-in-out infinite alternate}.it:hover .led{animation:led .8s steps(1) infinite}
+.it:hover .rt{animation:rt .8s linear infinite}.it svg .trav{offset-distance:0%;transform-box:view-box;offset-rotate:0deg}.it:hover .trav{animation:trav 2.4s ease-in-out infinite}.it:hover .pin{animation:drop .6s cubic-bezier(.3,1.6,.5,1) both}.it:hover .day{animation:din .5s ease both}.it:hover .sun{animation:core 1.2s ease-in-out infinite alternate}
+.it:hover .tA circle:first-child{animation:occ 1.6s steps(1) infinite}.it:hover .tB circle:first-child{animation:occ2 1.6s steps(1) infinite}.bar{transform-origin:50% 100%!important}.it:hover .bar{animation:bar .9s cubic-bezier(.3,1.4,.5,1) infinite alternate}.it:hover .flw{animation:spin 3s linear infinite}
+.it:hover .ring{animation:spin 6s linear infinite}.it:hover .dt{animation:jit .5s ease-in-out infinite alternate}.it:hover .flag{animation:pop .5s cubic-bezier(.3,1.6,.5,1) both}
+.cur{position:fixed;left:0;top:0;width:28px;height:28px;margin:-14px 0 0 -14px;border:1.5px solid #FFFFFF;border-radius:50%;pointer-events:none;z-index:60;mix-blend-mode:difference;transition:width .25s,height .25s,margin .25s,background .25s}
+.root:has(a:hover,button:hover) .cur{width:64px;height:64px;margin:-32px 0 0 -32px;background:#FFFFFF}
+@media (hover:none){.cur{display:none}}
+.mag{position:relative;overflow:hidden}.mag::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%)}.mag:hover::after{transition:transform .7s;transform:translateX(120%)}
+.bl{transition:transform .35s,box-shadow .35s}.bl:hover{transform:translateY(-4px);box-shadow:6px 6px 0 #111111}.bl .ar{display:inline-block;transition:transform .3s}.bl:hover .ar{transform:translateX(6px)}
+.em:hover span:last-child{text-decoration:underline;text-underline-offset:4px}
+.hb{transition:transform .35s cubic-bezier(.3,1.4,.5,1),box-shadow .35s}.hb:hover{transform:translateY(-6px) rotate(-1.2deg);box-shadow:6px 6px 0 #111111}.hi{transition:transform .5s cubic-bezier(.3,1.6,.5,1)}.hb:hover .hi{transform:rotate(-14deg) scale(1.08)}
+@keyframes ld{0%,100%{width:3%}50%{width:7%}}.hb:hover .ld{animation:ld 1.2s ease-in-out infinite}
+.av{transition:transform .35s cubic-bezier(.3,1.6,.5,1)}.co:hover .av{transform:translateX(-4px) rotate(-10deg)}.co:hover .av2{transform:translateX(6px) rotate(10deg)}.co{transition:background .3s}.co:hover{background:#F6F3FF}
+@keyframes boom{0%{transform:rotate(var(--a)) translateY(0) scale(1);opacity:1}100%{transform:rotate(var(--a)) translateY(-46vh) rotate(260deg) scale(.6);opacity:0}}
+.so{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;transition:transform .3s cubic-bezier(.3,1.6,.5,1),box-shadow .3s}.so:hover{transform:translateY(-5px) rotate(-8deg) scale(1.06);box-shadow:0 10px 20px -8px rgba(0,0,0,.35)}
+@keyframes fi{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.fi{animation:fi .7s ease both}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

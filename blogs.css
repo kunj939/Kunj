@@ -1,0 +1,11 @@
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF}
+a{color:#111111;text-decoration:none}
+h1,h2,h3{font-family:'Bricolage Grotesque','DM Sans',sans-serif}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace;letter-spacing:.04em;text-transform:uppercase}
+.cs{transition:transform .35s cubic-bezier(.3,1.4,.5,1),box-shadow .35s}.cs:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:6px 6px 0 #111111}
+@keyframes sh{0%{background-position:-200px 0}100%{background-position:200px 0}}
+.sk{background:linear-gradient(90deg,#EDEDED 0,#F7F7F7 40px,#EDEDED 80px) #EDEDED;background-size:200px 100%;animation:sh 1.6s linear infinite}
+@keyframes slide{to{transform:translateX(-50%)}}.mq{animation:slide 24s linear infinite}
+.back:hover .ar{transform:translateX(-5px)}.back .ar{display:inline-block;transition:transform .3s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
