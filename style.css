@@ -17,7 +17,7 @@ a{color:#111111;text-decoration:none}
 .nv .bar{display:inline-block;width:32px;height:1px;background:#8A8A8A;transition:width .3s,background .3s}.nv:hover .bar{width:64px;background:#111111}.nv:hover{color:#111111!important}
 .lst:hover .it{opacity:.45}.lst .it{transition:opacity .3s,background .3s}.lst .it:hover{opacity:1;background:#F6F6F6}
 .it:hover .tt{text-decoration:underline;text-underline-offset:4px}.it .ar{display:inline-block;transition:transform .3s}.it:hover .ar{transform:translate(3px,-3px)}
-.btn{transition:transform .25s,background .25s}.btn:hover{transform:translateY(-2px);background:#333333!important}
+.btn{transition:transform .25s,background .25s}.btn:hover{transform:translateY(-2px);background:#F2F2F2!important}
 .ul:hover{text-decoration:underline;text-underline-offset:4px}
 input:focus,textarea:focus{outline:2px solid #111111;outline-offset:1px}
 .lt{display:inline-block;transition:transform .25s cubic-bezier(.3,1.6,.5,1),color .25s}.lt:hover{transform:translateY(-10px) rotate(-6deg);color:#8A8A8A}
@@ -36,7 +36,7 @@ input:focus,textarea:focus{outline:2px solid #111111;outline-offset:1px}
 .cur{position:fixed;left:0;top:0;width:28px;height:28px;margin:-14px 0 0 -14px;border:1.5px solid #FFFFFF;border-radius:50%;pointer-events:none;z-index:60;mix-blend-mode:difference;transition:width .25s,height .25s,margin .25s,background .25s}
 .root:has(a:hover,button:hover) .cur{width:64px;height:64px;margin:-32px 0 0 -32px;background:#FFFFFF}
 @media (hover:none){.cur{display:none}}
-.mag{position:relative;overflow:hidden}.mag::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%)}.mag:hover::after{transition:transform .7s;transform:translateX(120%)}
+.mag{position:relative;overflow:hidden}.mag::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(0,0,0,.07) 50%,transparent 70%);transform:translateX(-120%)}.mag:hover::after{transition:transform .7s;transform:translateX(120%)}
 .bl{transition:transform .35s,box-shadow .35s}.bl:hover{transform:translateY(-4px);box-shadow:6px 6px 0 #111111}.bl .ar{display:inline-block;transition:transform .3s}.bl:hover .ar{transform:translateX(6px)}
 .em:hover span:last-child{text-decoration:underline;text-underline-offset:4px}
 .hb{transition:transform .35s cubic-bezier(.3,1.4,.5,1),box-shadow .35s}.hb:hover{transform:translateY(-6px) rotate(-1.2deg);box-shadow:6px 6px 0 #111111}.hi{transition:transform .5s cubic-bezier(.3,1.6,.5,1)}.hb:hover .hi{transform:rotate(-14deg) scale(1.08)}
