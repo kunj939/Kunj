@@ -31,24 +31,13 @@
   });
 
   // Contact modal
-  var modal = $('modal'), form = $('contactForm'), err = $('err');
-  function openForm() { modal.hidden = false; $('formBox').hidden = false; $('sentBox').hidden = true; err.hidden = true; setTimeout(function () { $('cEmail').focus(); }, 50); }
+  var modal = $('modal');
+  function openForm() { modal.hidden = false; setTimeout(function () { $('mailBtn').focus(); }, 50); }
   function closeForm() { modal.hidden = true; }
   document.querySelectorAll('[data-action="open-form"]').forEach(function (b) { b.addEventListener('click', openForm); });
   document.querySelectorAll('[data-action="close-form"]').forEach(function (b) { b.addEventListener('click', closeForm); });
   modal.addEventListener('click', function (e) { if (e.target === modal) closeForm(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closeForm(); });
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var email = $('cEmail').value.trim(), msg = $('cMsg').value.trim();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.hidden = false; return; }
-    err.hidden = true;
-    var body = 'Hi Kunjbihari,\n\n' + (msg || 'I have a project I would like to discuss.') + '\n\nReach me at: ' + email;
-    $('sendLink').href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('Project enquiry') + '&body=' + encodeURIComponent(body);
-    $('sentEmail').textContent = email;
-    $('formBox').hidden = true; $('sentBox').hidden = false;
-    boom();
-  });
 
   // Terminal — understands plain questions, typos and synonyms
   var A = {
@@ -65,11 +54,11 @@
     skills: 'Offline LLMs · RAG · AI agents · GPU infrastructure · Python · SQL · Java · React.js · FastAPI · NLP · Transformers · Machine learning · Statistical modelling.',
     hobbies: 'Watching cricket · playing basketball · listening to rap · writing shayari (first original sher: still loading… 3%)',
     shayari: 'Error 404: original shayari not found. Still working on it.',
-    contact: 'Email: Kunj07382@gmail.com · Kunj-bihari@yaitro.com · kunjbihari.k@nriindia.co.in\nWhatsApp: +91 63752 92488 → wa.me/916375292488\nOr type "hire" to open the contact form.',
+    contact: 'Email: Kunj07382@gmail.com · Kunj-bihari@yaitro.com · kunjbihari.k@nriindia.co.in\nWhatsApp: +91 63752 92488 → wa.me/916375292488\nOr type "hire" to get in touch.',
     socials: 'LinkedIn: linkedin.com/in/kvmeena · Instagram: instagram.com/its_kvmeena · WhatsApp: +91 63752 92488',
     resume: 'Résumé PDF coming soon — meanwhile, type "hire" and I\'ll send it over.',
     location: 'Based in Gurugram, India.',
-    hire: 'Excellent choice. Opening the contact form…',
+    hire: 'Excellent choice. Opening the email and WhatsApp options…',
     hello: 'Hey there! 👋 Ask me about Kunjbihari — projects, experience, education, or how to hire him.',
     thanks: 'Anytime! Type "hire" if you\'d like to work together.',
     party: 'Confetti deployed. Thanks for visiting!'
