@@ -208,3 +208,20 @@ main,footer,.top{position:relative;z-index:1}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .w,.rv{opacity:1;transform:none;translate:none}
 }
+
+/* hero layout: intro left, About streaming right */
+.hero{padding-bottom:40px}
+.headline{font-size:clamp(42px,7vw,96px)}
+.herogrid{display:grid;grid-template-columns:1fr;gap:36px;margin-top:40px}
+.herol .lead{margin-top:0}
+.about{margin:0}
+.about p{margin:0 0 16px;font-size:17px;line-height:1.75;max-width:none}
+.about .first{font-size:clamp(19px,1.7vw,22px)}
+.sw{opacity:0;transition:opacity .35s ease}
+.sw.on{opacity:1}
+.bento{padding-top:24px}
+@media (min-width:900px){
+  .herogrid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;margin-top:56px;align-items:start}
+  .herol{position:sticky;top:100px}
+}
+@media (prefers-reduced-motion:reduce){.sw{opacity:1}}

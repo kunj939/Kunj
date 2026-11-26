@@ -1,4 +1,28 @@
 (function () {
+  // Stream the About text word by word
+  var words = [];
+  document.querySelectorAll('#about p').forEach(function (p) {
+    var parts = p.textContent.split(/\s+/).filter(Boolean);
+    p.textContent = '';
+    parts.forEach(function (w, i) {
+      var sp = document.createElement('span'); sp.className = 'sw'; sp.textContent = w;
+      p.appendChild(sp); if (i < parts.length - 1) p.appendChild(document.createTextNode(' '));
+      words.push(sp);
+    });
+  });
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { words.forEach(function (w) { w.classList.add('on'); }); }
+  else {
+    var k = 0;
+    setTimeout(function () {
+      var t = setInterval(function () {
+        if (k >= words.length) return clearInterval(t);
+        words[k++].classList.add('on');
+        if (k < words.length) words[k++].classList.add('on');
+      }, 55);
+    }, 900);
+  }
+
   var $ = function (id) { return document.getElementById(id); };
 
   // Live Gurugram time
